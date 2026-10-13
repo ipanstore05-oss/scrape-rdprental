@@ -1,0 +1,34 @@
+{
+  "jadi-host-syarat": {
+    "status": 200,
+    "body": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    \n    <title inertia>Syarat &amp; Ketentuan Program Host — RDP Rental Indonesia</title>\n    <meta inertia name=\"robots\" content=\"noindex, follow\">\n            <meta inertia name=\"description\" content=\"Syarat &amp; ketentuan lengkap Program Host RDP Rental Indonesia — bagi hasil, escrow pembayaran, syarat teknis PC, dan keterbatasan keamanan yang wajib dibaca sebelum mendaftar.\">\n        <meta inertia name=\"keywords\"\n        content=\"sewa rdp, rdp murah, rdp lokal, sewa rdp murah, sewa rdp lokal, remote desktop murah, remote desktop lokal, rdp windows, rdp baremetal, bare metal server, sewa pc rdp, rdp per jam, rdp mumu emulator, rental pc high spec\">\n    <meta name=\"author\" content=\"RDP Rental Indonesia\">\n            <link inertia rel=\"canonical\" href=\"https://rdprental.id/jadi-host/syarat\">\n    \n    <!-- Social Media Meta Tags -->\n    <meta inertia property=\"og:title\" content=\"Syarat &amp; Ketentuan Program Host — RDP Rental Indonesia\">\n            <meta inertia property=\"og:description\" content=\"Syarat &amp; ketentuan lengkap Program Host RDP Rental Indonesia — bagi hasil, escrow pembayaran, syarat teknis PC, dan keterbatasan keamanan yang wajib dibaca sebelum mendaftar.\">\n        <meta inertia property=\"og:image\" content=\"https://rdprental.id/image/favicon.ico\">\n    <meta inertia property=\"og:url\" content=\"https://rdprental.id/jadi-host/syarat\">\n    <meta inertia property=\"og:type\" content=\"website\">\n    <meta name=\"twitter:card\" content=\"summary_large_image\">\n\n    <!-- App favicon -->\n    <link rel=\"shortcut icon\" href=\"https://rdprental.id/image/favicon.ico\">\n\n    \n    <!-- Google tag (gtag.js) - properti khusus RDP Rental Indonesia (rdprental.id),\n         terpisah dari properti GA iniaku.my.id -->\n    <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-3W1YNJJC8P\"></script>\n    <script>\n        window.dat"
+  },
+  "checkout-trial-ineligible": {
+    "status": 422,
+    "body": "{\"error\":\"Trial gratis hanya bisa dipakai 1x seumur hidup akun, dan akun ini sudah pernah memakainya. Silakan pilih paket berbayar.\"}"
+  },
+  "checkout-invalid-machine": {
+    "status": 422,
+    "body": "{\"message\":\"The selected machine id is invalid.\",\"errors\":{\"machine_id\":[\"The selected machine id is invalid.\"]}}"
+  },
+  "topup-amount-0": {
+    "status": 422,
+    "body": "{\"message\":\"The amount field must be at least 1.\",\"errors\":{\"amount\":[\"The amount field must be at least 1.\"]}}"
+  },
+  "storage-invalid": {
+    "status": 422,
+    "body": "{\"message\":\"The selected size gb is invalid.\",\"errors\":{\"size_gb\":[\"The selected size gb is invalid.\"]}}"
+  },
+  "wa-generate-code": {
+    "status": 422,
+    "body": "{\"message\":\"The phone field is required.\",\"errors\":{\"phone\":[\"The phone field is required.\"]}}"
+  },
+  "end-block-preview-cleaned": {
+    "status": 422,
+    "body": "{\"error\":\"Sesi ini tidak bisa diakhiri.\"}"
+  },
+  "notify-id1": {
+    "status": 200,
+    "body": "{\"ok\":true}"
+  }
+}

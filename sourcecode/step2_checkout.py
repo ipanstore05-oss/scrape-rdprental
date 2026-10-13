@@ -1,0 +1,19 @@
+import pickle, pathlib, requests, urllib.parse, json
+s=requests.Session()
+s.headers.update({'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36','Accept':'application/json','Referer':'https://rdprental.id/','Origin':'https://rdprental.id/','X-Requested-With':'XMLHttpRequest','Content-Type':'application/json'})
+cookies = pickle.loads(pathlib.Path(r"C:\Users\RENT~1.BVN\AppData\Local\Temp\opencode\otp_cookies5.pkl").read_bytes())
+s.cookies.update(cookies)
+xsrf = s.cookies.get('XSRF-TOKEN')
+s.headers.update({'X-XSRF-TOKEN': urllib.parse.unquote(xsrf)})
+payload = {"machine_id": 30, "duration_type": "hourly", "hours": 1}
+print("POST /sewa/checkout", payload)
+r = s.post('https://rdprental.id/sewa/checkout', json=payload, timeout=30)
+print("status:", r.status_code)
+print(r.text[:5000])
+if r.status_code == 200:
+    data = r.json()
+    pathlib.Path(r"C:\Users\RENT~1.BVN\AppData\Local\Temp\opencode\checkout_qris.json").write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    print("saved checkout_qris.json")
+    print("rental:", data.get("rental"))
+    print("invoice:", json.dumps(data.get("invoice"), ensure_ascii=False, indent=2)[:3000])
+open(r"C:\Users\RENT~1.BVN\AppData\Local\Temp\opencode\otp_cookies6.pkl","wb").write(pickle.dumps(s.cookies))

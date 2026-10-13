@@ -1,0 +1,13 @@
+﻿id,machine_name,package_name,status,billing_mode,is_paused,price_paid,starts_at,expires_at,can_extend,rdp_host,rdp_port
+2074,Host-20-OHT3,"Server E3-1220 v5  (4 Core, 4 Thread)",pending_payment,block,False,4000,,,False,,
+2073,Host-20-AAOP,"Server E5-2696 v4  (22 Core, 44 Thread) + RX 6600 8GB",active,metered,False,4011,,,False,direct57.rdprental.id,20267
+2069,Host-20-OHT3,"Server E3-1220 v5  (4 Core, 4 Thread)",cleaned,metered,False,3177,,,False,,
+2068,PC-2,Sultan,cleaned,block,False,21000,"13 Oct 2026, 14:35 WIB","13 Oct 2026, 17:35 WIB",False,,
+2067,Host-21-XTRA,AFK Gaming - RX 580 8GB (RAM 64GB),cleaned,metered,False,1222,,,False,,
+2066,Host-20-AAOP,"Server E5-2696 v4  (22 Core, 44 Thread) + RX 6600 8GB",cleaned,block,False,7000,"13 Oct 2026, 14:01 WIB","13 Oct 2026, 16:01 WIB",False,,
+2025,Host-20-OHT3,"Server E3-1220 v5  (4 Core, 4 Thread)",cleaned,metered,False,6989,,,False,,
+1929,Host-20-OHT3,"Server E3-1220 v5  (4 Core, 4 Thread)",cleaned,metered,False,10359,,,False,,
+1922,Host-20-OHT3,"Server E3-1220 v5  (4 Core, 4 Thread)",cleaned,metered,False,3569,,,False,,
+1921,Host-20-OHT3,"Server E3-1220 v5  (4 Core, 4 Thread)",expired,block,False,15300,,,False,,
+1877,Host-51-FAQ8,Sweetspot (with RTX 3070 Ti),cleaned,block,False,24000,"06 Oct 2026, 20:09 WIB","07 Oct 2026, 02:11 WIB",False,,
+1865,Host-14-CTLE,RX 9060 XT 16GB [Wortel] H14,cleaned,block,False,15000,"06 Oct 2026, 16:53 WIB","06 Oct 2026, 19:26 WIB",False,,

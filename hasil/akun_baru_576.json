@@ -1,0 +1,27 @@
+{
+  "customer": {
+    "id": 576,
+    "name": null,
+    "phone": "6285117834250",
+    "is_suspended": false,
+    "suspension_reason": null,
+    "suspended_at": null,
+    "phone_verified_at": "2026-10-13T13:26:45.000000Z",
+    "telegram_chat_id": null,
+    "telegram_linked_at": null,
+    "wa_verification_code": null,
+    "wa_verification_code_expires_at": null,
+    "wa_verification_detected_phone": null,
+    "wa_verified_at": "2026-10-13T13:25:27.000000Z",
+    "last_trial_at": null,
+    "created_at": "2026-10-13T13:06:19.000000Z",
+    "updated_at": "2026-10-13T13:26:45.000000Z",
+    "wallet": null
+  },
+  "walletBalance": 0,
+  "canClaimTrial": true,
+  "customerHasStorage": false,
+  "rentals_count": 0,
+  "saldo": 0,
+  "transactions_count": 0
+}
