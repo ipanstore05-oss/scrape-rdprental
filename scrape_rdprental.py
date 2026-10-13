@@ -1,17 +1,27 @@
 """Scraper publik rdprental.id — tanpa login.
 Mengambil data-page Inertia dari / dan /sewa, output JSON + CSV.
 Jalankan: python scrape_rdprental.py
+
+KEAMANAN: script ini READ-ONLY (hanya HTTP GET ke halaman publik).
+Tidak ada login, kredensial, OTP, checkout, atau POST apa pun.
+Aman dipublish ke repo publik.
 """
-import re, json, html, csv, pathlib, urllib.request
+import re, json, html, csv, pathlib, urllib.request, urllib.error
 
 BASE = "https://rdprental.id"
+TIMEOUT = 30  # detik; jangan retry otomatis biar tidak membebani server
 OUT_DIR = pathlib.Path(__file__).parent / "hasil"
 OUT_DIR.mkdir(exist_ok=True)
 
 def fetch_machines(url: str):
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        text = r.read().decode("utf-8", errors="replace")
+    try:
+        with urllib.request.urlopen(req, timeout=TIMEOUT) as r:  # GET saja
+            text = r.read().decode("utf-8", errors="replace")
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"HTTP {e.code} saat ambil {url}") from e
+    except urllib.error.URLError as e:
+        raise RuntimeError(f"Gagal konek ke {url}: {e.reason}") from e
     m = re.search(r'data-page="(.+?)"', text, re.DOTALL)
     if not m:
         raise RuntimeError(f"data-page tidak ketemu di {url}")
